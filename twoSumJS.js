@@ -11,18 +11,7 @@ function twoSum(nums, target) {
     return [];
 }
 
-function expect(got, expected, name = "no name") {
-    // console.log(JSON.stringify(got))
-    // console.log(JSON.stringify(expected))
-    if (JSON.stringify(got) === JSON.stringify(expected)) {
-        console.log("ok " + name);
-        return;
-    }
-    console.error("not ok " + name);
-    console.error("  got:      " + got);
-    console.error("  expected: " + expected);
-    return;
-}
+import { expect } from "./expect.js"
 
 expect(twoSum([2,7,11,15], 9), [0,1]);
 expect(twoSum([3,2,4], 6), [1,2]);
