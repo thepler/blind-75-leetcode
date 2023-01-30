@@ -5,7 +5,10 @@ function findMin(nums) {
     if (nums.length === 1) { return nums[0] }
     const finder = (start, end) => {
         // console.log(start + " " + end);
-        if (start === end || start + 1 == end) {
+        if (start === end) {
+            return nums[start];
+        }
+        if (start + 1 === end) {
             if (nums[start] < nums[end]) {
                 // console.log("returning start");
                 return nums[start];
@@ -35,3 +38,4 @@ expect(findMin([4,5,6,7,0,1,2]), 0);
 expect(findMin([0,1,2,4,5,6,7]), 0);
 expect(findMin([2,1]), 1);
 expect(findMin([1,2]), 1);
+expect(findMin([3,4,5,6,7,0,1,2]), 0);
