@@ -18,5 +18,9 @@ import { expect } from "./expect.js"
 expect(checkRecord("PPALLP"), true);
 expect(checkRecord("PPALLL"), false);
 expect(checkRecord("PPALALA"), false);
-expect(checkRecord("PPALALP"), true);
-expect(checkRecord("AA"), true);
+expect(checkRecord("PPALALP"), false);
+expect(checkRecord("AA"), false);
+expect(checkRecord("PLLLLPAP"), false);
+expect(checkRecord("A"), true);
+expect(checkRecord("P"), true);
+expect(checkRecord("L"), true);
