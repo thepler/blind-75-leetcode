@@ -2,15 +2,20 @@
 
 // https://leetcode.com/problems/n-th-tribonacci-number/
 
-const memo = {}
 const tribonacci = function(n) {
-    return tribMemo(n, memo);
-}
-const tribMemo = function(n, memo) {
-    if (n === 0) { return 0 }
-    if (n === 1 || n === 2) { return 1 }
-    if (memo[n]) { return memo[n] }
-    return tribonacci(n - 3, memo) + tribonacci(n - 2, memo) + tribonacci(n - 1, memo)
+    if (n < 2) { return n }
+    if (n === 2) { return 1 }
+    var a = 0;
+    var b = 1;
+    var c = 1;
+    var d;
+    for (var i = 3; i <= n; i++) {
+        d = c;
+        c = a + b + c;
+        a = b;
+        b = d;
+    }
+    return c;
 }
 
 import { expect } from "./expect.js"
