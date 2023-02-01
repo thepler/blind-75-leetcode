@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// https://leetcode.com/problems/valid-parentheses/
+// https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 
 const removeDuplicates = function(nums) {
     if (nums.length === 0 || nums.length === 1) { return nums }
