@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+// binary search
 function search(nums, target) {
     if (nums.length === 0) { return -1 }
     const yepOrNope = (i) => {
