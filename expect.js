@@ -5,7 +5,7 @@ export function expect(got, expected) {
     // console.log(JSON.stringify(got))
     // console.log(JSON.stringify(expected))
     if (JSON.stringify(got) === JSON.stringify(expected)) {
-        console.log("ok " + n);
+        console.log("ok " + n + " " + got);
         n++;
         return;
     }
